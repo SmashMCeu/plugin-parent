@@ -14,7 +14,6 @@
 	<properties>
 		<!-- Spigot -->
 		<paper.groupId>eu.smashmc.curryspigot</paper.groupId>
-		<paper.artifactId>api</paper.artifactId>
 		<paper.version>1.8.8-R0.1-SNAPSHOT</paper.version>
 		<!-- Bungee -->
 		<waterfall.groupId>io.github.waterfallmc</waterfall.groupId>
@@ -25,7 +24,13 @@
 	<dependencies>
 		<dependency>
 			<groupId>${paper.groupId}</groupId>
-			<artifactId>${paper.artifactId}</artifactId>
+			<artifactId>api</artifactId>
+			<version>${paper.version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>${paper.groupId}</groupId>
+			<artifactId>curryspigot</artifactId>
 			<version>${paper.version}</version>
 			<scope>provided</scope>
 		</dependency>
