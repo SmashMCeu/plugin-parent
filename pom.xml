@@ -12,15 +12,20 @@
 	</parent>
 
 	<properties>
-		<!-- Plugin specific properties -->
+		<!-- Spigot -->
+		<paper.groupId>eu.smashmc.curryspigot</paper.groupId>
+		<paper.artifactId>api</paper.artifactId>
 		<paper.version>1.8.8-R0.1-SNAPSHOT</paper.version>
+		<!-- Bungee -->
+		<waterfall.groupId>io.github.waterfallmc</waterfall.groupId>
+		<waterfall.artifactId>waterfall-proxy</waterfall.artifactId>
 		<waterfall.version>1.0-SNAPSHOT</waterfall.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>eu.smashmc.curryspigot</groupId>
-			<artifactId>api</artifactId>
+			<groupId>${paper.groupId}</groupId>
+			<artifactId>${paper.artifactId}</artifactId>
 			<version>${paper.version}</version>
 			<scope>provided</scope>
 		</dependency>
