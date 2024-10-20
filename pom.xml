@@ -39,4 +39,11 @@
 			</resource>
 		</resources>
 	</build>
+
+	<repositories>
+		<repository>
+			<id>smashmc-public</id>
+			<url>https://repo.smashmc.eu/public</url>
+		</repository>
+	</repositories>
 </project>
