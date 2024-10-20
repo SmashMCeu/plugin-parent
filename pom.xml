@@ -40,6 +40,7 @@
 		</resources>
 	</build>
 
+	<!-- Required to resolve the parent-->
 	<repositories>
 		<repository>
 			<id>smashmc-public</id>
