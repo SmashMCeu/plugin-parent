@@ -1,0 +1,30 @@
+kind: pipeline
+type: docker
+name: cicd
+
+steps:
+  - name: Setup Maven
+    image: alpine:latest
+    environment:
+      REPO_ID: internal.repo
+      REPO_USERNAME:
+        from_secret: reposilite_username
+      REPO_PASSWORD:
+        from_secret: reposilite_password
+    commands:
+      - echo '<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd"><servers><server><id>'$REPO_ID'</id><username>'$REPO_USERNAME'</username><password>'$REPO_PASSWORD'</password></server></servers></settings>' > settings.xml
+
+  - name: Verify
+    image: maven:3.9.6-eclipse-temurin-21-alpine
+    commands:
+      - mvn verify -B -gs settings.xml
+
+  - name: Deploy
+    image: maven:3.9.6-eclipse-temurin-21-alpine
+    commands:
+      - mvn deploy -DaltDeploymentRepository=internal.repo::https://repo.smashmc.eu/public -B -gs settings.xml
+    when:
+      branch:
+        - main
+      event:
+        - push
