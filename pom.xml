@@ -12,26 +12,26 @@
 	</parent>
 
 	<properties>
-		<!-- Spigot -->
-		<paper.groupId>eu.smashmc.curryspigot</paper.groupId>
-		<paper.version>1.8.8-R0.1-SNAPSHOT</paper.version>
+		<!-- Bukkit -->
+		<bukkit.groupId>eu.smashmc.curryspigot</bukkit.groupId>
+		<bukkit.version>1.8.8-R0.1-SNAPSHOT</bukkit.version>
 		<!-- Bungee -->
-		<waterfall.groupId>io.github.waterfallmc</waterfall.groupId>
-		<waterfall.artifactId>waterfall-proxy</waterfall.artifactId>
-		<waterfall.version>1.0-SNAPSHOT</waterfall.version>
+		<bungee.groupId>net.md-5</bungee.groupId>
+		<bungee.artifactId>bungeecord-api</bungee.artifactId>
+		<bungee.version>1.21-R0.1-SNAPSHOT</bungee.version>
 	</properties>
 
 	<dependencies>
 		<dependency>
-			<groupId>${paper.groupId}</groupId>
+			<groupId>${bukkit.groupId}</groupId>
 			<artifactId>api</artifactId>
-			<version>${paper.version}</version>
+			<version>${bukkit.version}</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
-			<groupId>${paper.groupId}</groupId>
+			<groupId>${bukkit.groupId}</groupId>
 			<artifactId>curryspigot</artifactId>
-			<version>${paper.version}</version>
+			<version>${bukkit.version}</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
