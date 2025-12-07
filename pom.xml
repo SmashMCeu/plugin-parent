@@ -18,7 +18,7 @@
 		<!-- Bungee -->
 		<bungee.groupId>net.md-5</bungee.groupId>
 		<bungee.artifactId>bungeecord-api</bungee.artifactId>
-		<bungee.version>1.21-R0.1-SNAPSHOT</bungee.version>
+		<bungee.version>1.21-R0.5-SNAPSHOT</bungee.version>
 	</properties>
 
 	<dependencies>
