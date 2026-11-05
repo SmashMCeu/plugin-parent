@@ -26,6 +26,13 @@
 			<artifactId>api</artifactId>
 			<version>${bukkit.version}</version>
 			<scope>provided</scope>
+			<exclusions>
+				<!-- json-simple drags in junit 4.10, which Surefire 3.6+ rejects -->
+				<exclusion>
+					<groupId>junit</groupId>
+					<artifactId>junit</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>${bukkit.groupId}</groupId>
